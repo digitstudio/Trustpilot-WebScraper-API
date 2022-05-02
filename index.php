@@ -5,32 +5,37 @@ include("functions.php");
 
 
 
-$floatvalue = "";
+$scorevalue = "";
 $totalreview = "";
 
-if (isset($_GET['url'])) {
-
-	$floatvalue = get_score_from_trustpilot("https://www.trustpilot.com/review/digitstudio.fr"); // GET GLOBAL SCORE FROM TRUSTPILOT OF OUR WEBSITE like for example 2.5/5 
+// for example url = https://www.trustpilot.com/review/digitstudio.fr 
+if (isset($_GET['url']))  {
+	$url = $_GET['url'];
+	$scorevalue = get_score_from_trustpilot($url); // GET GLOBAL SCORE FROM TRUSTPILOT OF OUR WEBSITE like for example 2.5/5 
 	if (isset($_GET['score'])) {
-		echo $floatvalue;
+		echo $scorevalue;
 	}
 
 	if (isset($_GET['scoreimg'])) {
-		echo "<img src='img/stars-" . $floatvalue . ".svg'</img>";
+		echo "<img src='img/stars-" . $scorevalue . ".svg'</img>";
 	}
 
 	if (isset($_GET['totalreview'])) {
-		$totalreview = get_total_review("https://www.trustpilot.com/review/digitstudio.fr");
+		$totalreview = get_total_review($url);
 		echo $totalreview;
 	}
 
 	if (isset($_GET['widgetmini'])) {
 		if ($totalreview == "") {
-			$totalreview = get_total_review("https://www.trustpilot.com/review/digitstudio.fr");
+			$totalreview = get_total_review($url);
 			include("widgetmini.php"); 
 		}
+		
 	}
 } else {
 	echo "URL is a parameter needed";
 	exit;
 }
+
+
+?>

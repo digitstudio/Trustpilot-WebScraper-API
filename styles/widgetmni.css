@@ -1,0 +1,53 @@
+.td-widget-wrapper {
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.tp-widget-logo {
+    margin: 0 0 8px;
+    width: 55%;
+}
+
+@media screen and (min-width: 200px) {
+    .tp-widget-logo {
+        max-width: 140.25px;
+    }
+}
+
+a {
+    color: #191919;
+    text-decoration: none;
+}
+
+.tp-widget-stars {
+    margin: 0 0 8px;
+    max-width: 220px;
+}
+
+.tp-widget-logo {
+    margin: 0 0 8px;
+    width: 55%;
+}
+
+@media screen and (min-width: 200px) {
+    .tp-widget-logo {
+        max-width: 140.25px;
+    }
+}
+
+#svg {
+    height: 45px;
+}
+.tp-widget-businessinfo {
+    font-size: 11px;
+    line-height: 1.2;
+}
+
+@media screen and (min-width: 200px) {
+    .tp-widget-businessinfo {
+        font-size: 14px;
+        max-width: 255px;
+    }
+}
