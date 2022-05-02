@@ -32,7 +32,7 @@
         <div id="reviews-summary" class="tp-widget-businessinfo">
             <div aria-hidden="true" class="tp-widget-businessinfo__trustscore">
                 <span>TrustScore </span><strong id="trust-score"><?php  echo $scorevalue; ?></strong>
-                <strong id="businessEntity-numberOfReviews-total"> | 250</strong>
+                <strong id="businessEntity-numberOfReviews-total"> | <?php echo $totalreview; ?></strong>
                 <span id="translations-reviews">avis</span>
             </div>
            
