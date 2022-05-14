@@ -34,9 +34,10 @@ function get_total_review($url)
     $page = file_get_contents($url, false, $useragent);
     $split_data = "typography_fontstyle-normal__kHyN3 styles_text__W4hWi";
     $parsed = get_string_between($page, $split_data, "<!-- -->");
-    $floatvalue = floatval($parsed);
+    $parsed = preg_replace('/[^0-9]/', '', $parsed);
+    $intvalue = intval($parsed);
 
-    return $floatvalue;
+    return $intvalue;
 }
 
 

@@ -21,7 +21,7 @@
                 <div class="tp-stars tp-stars--4 tp-stars--4--half">
                     <div style="position: relative; height: 0; width: 100%; padding: 0; padding-bottom: 18.326693227091635%;">
 
-                        <img id="svg"  src="img/stars-<?php echo $scorevalue; ?>.svg"></img>
+                        <img id="svg"  src="img/stars-<?php echo $picture; ?>.svg"></img>
 
 
                     </div>
